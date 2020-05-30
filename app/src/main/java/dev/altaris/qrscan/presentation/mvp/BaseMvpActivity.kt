@@ -45,7 +45,7 @@ abstract class BaseMvpActivity<in V : BaseMvpView, T : BaseMvpPresenter<V>>
     override fun copyToClipboard(value: String) {
         val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
         val clip = ClipData.newPlainText("Qr-Code", value)
-        clipboard.primaryClip = clip
+        // clipboard.primaryClip = clip
     }
 
     override fun shareResultViewSharingIntent(result: String) {
